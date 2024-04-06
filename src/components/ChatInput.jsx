@@ -56,12 +56,13 @@ const setMsgg=(event)=>{
   };
 
   const handleKeyUp = () => {
-
+   
+    setTimeout(() => {
       socket.current.emit("typingModeOff", {
         head: "notyping",
         to: currentChat._id
       });
-  
+    }, 800); 
       
    
   };
